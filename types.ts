@@ -14,7 +14,7 @@ export interface Product{
     id:string,
     name:string,
     category:Category,
-    price:String,
+    price:string,
     isFeatured:boolean,
     size:Size,
     color:Color,

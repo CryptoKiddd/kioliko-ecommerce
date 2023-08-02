@@ -1,5 +1,6 @@
 import { Product } from "@/types";
 import NoResults from "./ui/no-results";
+import ProductCard from "./ui/Product-card";
 
 interface ProductListProps{
     title:string,
@@ -23,9 +24,7 @@ const ProductList:React.FC<ProductListProps> = ({
         ">
             {items.map((item)=>{
                 return(
-                <div key={item.name}>
-                  {item.name}
-                </div>
+                  <ProductCard key={item.id} data={item}/>
                 )
             })}
         </div>
