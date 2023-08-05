@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-
+    {/* @ts-expect-error async server component*/}  
         <Navbar />
         {children}
 
