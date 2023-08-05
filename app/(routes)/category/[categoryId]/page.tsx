@@ -4,6 +4,7 @@ import getProducts from "@/actions/get-products"
 import getSizes from "@/actions/get-sizes"
 import Billboard from "@/components/billboard"
 import Container from "@/components/ui/Container"
+import Filter from "./_components/filter"
 
 export const revalidate = 0
 
@@ -33,6 +34,18 @@ const CategoryPage = async ({
          <Container>
 
             <Billboard data={category.billboard} />
+            <div className="px-4 sm:px-6 lg:px-8 pb-24">
+                <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
+                 <div className="hidden lg:block">
+                    <Filter
+                    valueKey="sizeId"
+                    name="Sizes"
+                    data={sizes}
+                    />
+                 </div>
+
+                </div>
+            </div>
          </Container>
 
           
