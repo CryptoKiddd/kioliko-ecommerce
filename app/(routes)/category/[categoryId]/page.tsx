@@ -42,6 +42,11 @@ const CategoryPage = async ({
                     name="Sizes"
                     data={sizes}
                     />
+                    <Filter
+                    valueKey="colorId"
+                    name="Colors"
+                    data={colors}
+                    />
                  </div>
 
                 </div>
