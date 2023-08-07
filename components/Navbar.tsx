@@ -6,7 +6,11 @@ import Container from "./ui/Container";
 
 
 export const revalidate = 0
-const Navbar = async() => {
+const Navbar = async({
+  params
+}:{
+  params:string
+}) => {
   const categories = await getCategories()
     return ( 
         <div className="border-b">
