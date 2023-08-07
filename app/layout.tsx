@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import ModalProvider from '@/providers/modal-provider'
 import ToastProvider from '@/providers/toast-provider'
+import getCategories from '@/actions/get-categories'
 
 const font = Urbanist({ subsets: ['latin'] })
 
@@ -18,12 +19,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en">
        <body className={font.className}>
      <ModalProvider />
      <ToastProvider />
-    {/* @ts-expect-error async server component*/}  
+    
         <Navbar />
         {children}
 
