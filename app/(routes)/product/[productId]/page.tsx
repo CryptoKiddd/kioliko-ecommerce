@@ -9,14 +9,14 @@ import Container from '@/components/ui/Container';
 
 export const revalidate = 0;
 
-interface ProductPageProps {
-  params: {
-    productId: string;
-  },
-}
- {/* @ts-expect-error async server component*/}
-const ProductPage:React.FC<ProductPageProps> = async ({ 
+
+
+const ProductPage = async ({ 
   params
+ }:{
+  params:{
+    productId: string;
+  }
  }) => {
   const product = await getProduct(params.productId);
   const suggestedProducts = await getProducts({ 
